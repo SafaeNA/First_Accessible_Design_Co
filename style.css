@@ -1,0 +1,153 @@
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #17324d;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation using Flexbox */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(#0008, #0008),
+              url("hero.jpg") center/cover;
+  background-color: #17324d;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.button, button {
+  background-color: #f5c542;
+  color: #222;
+  padding: 12px 20px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  padding: 50px 10%;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* Services using CSS Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+article {
+  background-color: #f1f5f9;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+small {
+  display: block;
+}
+
+button {
+  margin-top: 15px;
+}
+
+/* Keyboard Focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #b45309;
+  outline-offset: 3px;
+}
+
+/* Footer */
+footer {
+  background-color: #17324d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+  margin: 10px;
+}
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  section {
+    padding: 30px 20px;
+  }
+}
